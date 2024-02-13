@@ -6,5 +6,6 @@ module.exports.SecretVariables = {
     PORT: 8082,
     DB_NAME: 'demo',
     DB_USER_NAME: 'postgres',
-    DB_USER_PASSWORD: 'root'
+    DB_USER_PASSWORD: 'root',
+    API_VERSION: '/api/v1'
 }

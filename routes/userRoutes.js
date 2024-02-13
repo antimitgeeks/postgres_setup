@@ -16,7 +16,7 @@ router.get("/users/:id", controller.getOneUser)
 router.put('/users/:id', controller.updateUser)
 // 5. delete user by id
 router.delete('/users/:id', controller.deleteUser)
-//6 . success login
-router.post('/login', passport.authenticate('local'), controller.login)
+//6 .login
+router.post('/users/login', passport.authenticate('local'), controller.login)
 
 module.exports = router

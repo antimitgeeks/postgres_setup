@@ -4,4 +4,4 @@
 # have sequelize as ORM  
 # two entity user and company
 # relation between them one to many 
-# user winston for logs 
+# use winston for logs 

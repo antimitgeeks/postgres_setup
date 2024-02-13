@@ -6,6 +6,7 @@ const companyRoutes = require('../routes/companyRoutes')
 const { initializePassport } = require('../config/passport')
 const expressSession = require('express-session') // session middleware
 const passport = require('passport') // authentication
+const config = require('../config/config')
 
 initializePassport(passport)
 const app = express()
@@ -24,17 +25,11 @@ app.use(passport.session())
 //after strategy we need to serialize and deserialize it 
 
 // Use user routes
-app.use('/api/v1', userRoutes);
-app.use('/api/v1', companyRoutes);
+app.use(config.API_VERSION, userRoutes);
+app.use(config.API_VERSION, companyRoutes);
 
 
 app.use(passport.session())
-
-// Route to handle file upload
-
-
-app.use(express.static('public'))
-app.use('/images', express.static('images'))  //correct
 
 module.exports = app
 
