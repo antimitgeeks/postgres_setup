@@ -1,15 +1,10 @@
-//postgres sql;
-const { Sequelize } = require('sequelize')
-const sequelize = new Sequelize('demo', 'postgres', 'root', {
-     host: 'localhost',
-     dialect: 'postgres',
-     // logging: false  // for block query logs
-})
+const { SecretVariables } = require('../constants/constants')
 
-//mysql
-// const sequelize = new Sequelize('users', 'root', '1506', {
-//   host: 'localhost',
-//   dialect: 'mysql',
-// });
+module.exports = {
 
-module.exports = sequelize
+     PORT: process.env.PORT || SecretVariables.PORT,
+     DB_NAME: process.env.DB_NAME || SecretVariables.DB_NAME,
+     DB_USER_NAME: process.env.DB_USER_NAME || SecretVariables.DB_USER_NAME,
+     DB_USER_PASSWORD: process.env.DB_USER_PASSWORD || SecretVariables.DB_USER_PASSWORD
+
+}

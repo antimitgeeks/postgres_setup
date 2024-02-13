@@ -1,10 +1,11 @@
 require('dotenv').config()
 const app = require('./app/app')
-const sequelize = require('./config/config')
+const sequelize = require('./db')
+require('./config/config')
 
 // Sync models with the database
 sequelize.sync().then(() => {
-     console.log('Database synced')
+     console.log('Database Connected')
 }).catch((err) => {
      console.error('Error syncing database:', err)
 })
