@@ -1,2 +1,7 @@
-# postgres_setup
-this repo are base on postgres basic setup with user and company crud
+******************************Based on Postgres*******************************
+
+# user postgres as DB 
+# have sequelize as ORM  
+# two entity user and company
+# relation between them one to many 
+# user winston for logs 
